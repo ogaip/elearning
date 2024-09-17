@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your meta description goes here">
+    <meta name="keywords" content="your, meta, keywords, go, here">
+    <title>eLearning</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                {% comment %} <li><a href="/">Inicio</a></li>
+                <li><a href="/modules">Módulos</a></li>
+                <li><a href="/export">Exportar a PDF</a></li> {% endcomment %}
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        {% block content %}
+        <!-- Aquí va el contenido dinámico de cada página -->
+        {% endblock content %}
+    </div>
+
+    <footer>
+        <p> <i class="fa fa-copyright" aria-hidden="true"></i> 2024 eLearning Platform. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1 class="center">Lista de Módulos</h1>
+    <ol>
+        {% for module in modules %}
+            <li>
+                <a href="{% url 'module_detail' module.id %}">{{ module.nombre_clase }}</a>
+            </li>
+        {% endfor %}
+    </ol>
+{% endblock content %}

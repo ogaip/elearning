@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Module Detail</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .center{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Modulo {{module.id}}</h1>
+        <div class="section">
+            <h1 class="center">{{ module.nombre_clase }}</h1>
+            <h3>Objetivos:</h3> {{module.objetivos}}
+            <p>Teoria: {{module.teoria}}</p>
+            <p>Demostracion: {{module.demonstracion}}</p>
+            <p>Practica: {{module.practica}}</p>
+            <p>Conclusion: {{module.conclusion}}</p>
+            <p>Preguntas: {{module.preguntas}}</p>
+        </div>
+    </div>
+</body>
+</html>

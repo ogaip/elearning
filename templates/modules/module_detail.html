@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% block content %}
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+    .center {
+        text-align: center;
+    }
+    h1 {
+        color: #333;
+
+    }
+    h3 {
+        color: #333;
+    }
+    li {
+        color: #333;
+    }
+    hr {
+        border: 0;
+        height: 1px;
+        background: #333;
+        background-image: linear-gradient(to right, #ccc, #333, #ccc);
+    }
+    </style>
+    <div class="caja">
+        <h1 class="center">{{ module.nombre_clase }}</h1>
+        <h3>
+            <strong>Objetivos:</strong>
+        </h3>
+        <span>
+            <ol>
+                {% for obj in objetivos %}<li>{{ obj|title|safe }}</li>{% endfor %}
+            </ol>
+        </span>
+    </div>
+    <hr>
+    <div class="caja">
+        <h3>
+            <strong>Teoria:</strong>
+        </h3>
+        <span>
+            <ol>
+                {% for teo in teoria %}<li>{{ teo }}</li>{% endfor %}
+            </ol>
+        </span>
+    </div>
+    <hr>
+    <div class="caja">
+        <h3><strong>Demostracion:</strong></h3>
+        <span>
+            {% for dem in demonstracion %}<li>{{ dem|safe }}</li>{% endfor %}
+        </span>
+    </div>
+    <div class="caja">
+        <h3>
+            <strong>Practica:</strong>
+        </h3>
+        <span>
+            {% for pra in practica %}<li>{{ pra|safe }}</li>{% endfor %}
+        </span>
+    </div>
+    <hr>
+    <div class="caja">
+        <h3>
+            <strong>Preguntas:</strong>
+        </h3>
+        <span>
+            {% for pre in preguntas %}<li>{{ pre|safe }}</li>{% endfor %}
+        </span>
+    </div>
+    <hr>
+    <div class="caja">
+        <h3>
+            <strong>Conclusion:</strong>
+        </h3>
+        <span>
+            {% for con in conclusion %}<li>{{ con|safe }}</li>{% endfor %}
+        </span>
+    </div>
+    
+{% endblock content %}
